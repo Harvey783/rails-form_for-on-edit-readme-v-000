@@ -1201,3 +1201,49 @@ Completed 302 Found in 12ms (ActiveRecord: 5.6ms)
 
 
 Started GET "/posts/6" for 73.233.93.144 at 2018-04-16 02:25:07 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/" for 73.233.93.144 at 2018-04-16 02:25:17 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/6" for 73.233.93.144 at 2018-04-16 02:25:20 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/6/edit" for 73.233.93.144 at 2018-04-16 02:25:23 +0000
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/edit.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/6" for 73.233.93.144 at 2018-04-16 02:25:26 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+iVS7fJVafo0c3c+/4LfbzVE68TZ8vDNsR6EPe+32zshxH6T74i3tRBqDVGCF0teIAMyEfNTm8l/6HeGemxGXw==", "post"=>{"title"=>"My edit", "description"=>"My post description"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://192.241.157.192:46876/posts/6
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6" for 73.233.93.144 at 2018-04-16 02:25:26 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
