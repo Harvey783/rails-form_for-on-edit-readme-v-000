@@ -1135,3 +1135,15 @@ Processing by PostsController#edit as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
   Rendered posts/edit.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/posts/2" for 73.233.93.144 at 2018-04-16 02:15:46 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A0q6JieN3hxXiIiHxN4Bies+Je6CVyGr3xlqejscXDfYq5ZYOlAAU3OR8ui5S5W4/nn8O6j2Sq8R75nBrsfBUw==", "title"=>"My edit", "description"=>"asdfasdf", "commit"=>"Submit Post", "id"=>"2"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+Completed 400 Bad Request in 11ms (ActiveRecord: 1.3ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: post):
+  app/controllers/posts_controller.rb:28:in `update'
+
+
